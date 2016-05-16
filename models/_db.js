@@ -1,8 +1,8 @@
 var Sequelize = require('sequelize');
 
 var config = {
-  "username": "gracehopper",
-  "password": "gh",
+  // "username": "gracehopper",
+  // "password": "gh",
   "database": "tripplanner",
   "host": "127.0.0.1",
   "dialect": "postgres",

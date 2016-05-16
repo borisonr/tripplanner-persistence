@@ -1,10 +1,11 @@
 var router = require('express').Router();
 var Promise = require('bluebird');
-var models = require('../models')
+var models = require('../models');
 var Hotel = models.Hotel;
 var Restaurant = models.Restaurant;
 var Activity = models.Activity;
 var Place = models.Place;
+// var attractions = require('./api/attractions.js');
 
 // OR, with ES6, you can do:
 //
@@ -19,11 +20,7 @@ router.get('/', function (req, res, next) {
     Activity.findAll({include: Place})
   ])
   .spread(function (hotels, restaurants, activities) {
-    res.render('index', {
-      hotels: hotels,
-      restaurants: restaurants,
-      activities: activities
-    });
+    res.render('index');
   })
   .catch(next);
 });
